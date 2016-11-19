@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -19,7 +20,7 @@
          <children>
             <TextField focusTraversable="false" promptText="username" />
             <Region VBox.vgrow="ALWAYS" />
-            <TextField focusTraversable="false" promptText="password" />
+            <PasswordField promptText="password" />
          </children>
       </VBox>
       <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">

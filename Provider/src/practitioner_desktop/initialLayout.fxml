@@ -22,7 +22,11 @@
             </Button>
             <Button fx:id="patientSentButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="198.0" mnemonicParsing="false" prefWidth="200.0" text="Sent" />
             <Region VBox.vgrow="ALWAYS" />
-            <Button fx:id="patientNewAccountButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="80.0" text="New Account" wrapText="true" />
+            <Button fx:id="patientNewAccountButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="80.0" text="New Account" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButton" prefWidth="200.0" text="Logout" />
          </children>
       </VBox>
       <VBox prefWidth="250.0">
@@ -53,6 +57,7 @@
             </HBox>
             <TextArea fx:id="patientTextArea" editable="false" focusTraversable="false" prefHeight="150.0" prefWidth="200.0" wrapText="true" VBox.vgrow="NEVER" />
             <TextArea fx:id="providerTextArea" focusTraversable="false" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS" />
+            <Button fx:id="providerSubmitButton" alignment="CENTER" mnemonicParsing="false" text="Submit" VBox.vgrow="ALWAYS" />
          </children></VBox>
    </children>
 </HBox>

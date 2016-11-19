@@ -4,18 +4,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
-
 
 public class InitialLayoutController implements Initializable {
 
@@ -26,7 +28,18 @@ public class InitialLayoutController implements Initializable {
     @FXML
     private Button patientSentButton;
     @FXML
+    private Button providerSubmitButton;
+    @FXML
     private Button patientNewAccountButton;
+
+    @FXML
+    public void logoutButton(ActionEvent event) {
+            try {
+                Main.primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("LoginScreen.fxml"))));
+            }catch(IOException e) {
+                e.printStackTrace();
+            }
+    }
 
     @FXML
     private ListView<Patient> listView;
@@ -83,12 +96,20 @@ public class InitialLayoutController implements Initializable {
                 listView.setItems(getPatientSentListViewData());
             }
         });
+
+        providerSubmitButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                clearPatientTextArea();
+            }
+        });
     }
 
     private void clearPatientTextArea(){
         patientSubjectLabel.setText("");
         patientSeverityLabel.setText("");
         patientTextArea.setText("");
+        providerTextArea.clear();
     }
 
     private ObservableList<Patient> getPatientListViewData(){
