@@ -68,6 +68,7 @@ public class InitialLayoutController implements Initializable {
             patientSubjectLabel.setText(observable.getValue().getMessageSubject());
             patientSeverityLabel.setText(Integer.toString(observable.getValue().getMessageSeverity()));
             patientTextArea.setText(observable.getValue().getMessageContent());
+            providerTextArea.clear();
         });
 
         patientInboxButton.setOnAction(new EventHandler<ActionEvent>() {
