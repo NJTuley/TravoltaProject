@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -9,19 +10,24 @@
    <children>
       <VBox alignment="CENTER" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" HBox.hgrow="ALWAYS">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" prefWidth="200.0" text="History" VBox.vgrow="ALWAYS">
+            <Button fx:id="patientInboxButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="200.0" text="Inbox">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="198.0" mnemonicParsing="false" prefWidth="200.0" text="Sent" />
+            <Button fx:id="patientReceiverButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" prefWidth="200.0" text="Received" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="patientSentButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="198.0" mnemonicParsing="false" prefWidth="200.0" text="Sent" />
             <Region VBox.vgrow="ALWAYS" />
-            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="80.0" text="New Account" wrapText="true" />
+            <Button fx:id="patientNewAccountButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="40.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="80.0" text="New Account" wrapText="true" />
          </children>
       </VBox>
       <VBox prefWidth="250.0">
          <children>
-            <ListView fx:id="mainContentListView" focusTraversable="false" VBox.vgrow="ALWAYS" />
+            <ListView fx:id="listView" focusTraversable="false" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
       <VBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
@@ -37,16 +43,16 @@
             </AnchorPane>
             <HBox>
                <children>
-                  <Label text="[Subject]">
+                  <Label fx:id="patientSubjectLabel" text="[Subject]">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <Label layoutX="10.0" layoutY="10.0" text="Severity" />
+                  <Label fx:id="patientSeverityLabel" layoutX="10.0" layoutY="10.0" text="Severity" />
                </children>
             </HBox>
-            <TextArea editable="false" focusTraversable="false" prefHeight="150.0" prefWidth="200.0" wrapText="true" VBox.vgrow="NEVER" />
-            <TextArea focusTraversable="false" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS" />
+            <TextArea fx:id="patientTextArea" editable="false" focusTraversable="false" prefHeight="150.0" prefWidth="200.0" wrapText="true" VBox.vgrow="NEVER" />
+            <TextArea fx:id="providerTextArea" focusTraversable="false" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS" />
          </children></VBox>
    </children>
 </HBox>
