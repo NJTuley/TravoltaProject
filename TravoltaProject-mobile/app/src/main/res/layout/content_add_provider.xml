@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/linearLayoutSettings"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.github.ngbrown11.travoltaproject_mobile.AddProviderActivity"
+    tools:showIn="@layout/activity_add_provider">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add nickname" />
+
+        <EditText
+            android:id="@+id/providerID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add provider ID"
+            android:layout_toRightOf="@+id/editText"
+            android:layout_toEndOf="@+id/editText" />
+
+        <Button
+            android:id="@+id/addProvider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/providerID" />
+
+    </RelativeLayout>
+
+</LinearLayout>

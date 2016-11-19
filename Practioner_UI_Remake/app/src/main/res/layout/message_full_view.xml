@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/replyBtn"
+            android:elevation="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/message_full_container">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="38dp">
+
+                <Button
+                    android:text="Back"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backBtnMessageFull"
+                    />
+
+                <TextView
+                    android:text="From:"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_width="46dp" />
+
+                <TextView
+                    android:text="Sender Placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/senderTxtFull"
+                    android:layout_weight="1"
+                    android:background = "@drawable/back"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="33dp">
+
+                <TextView
+                    android:text="Subject:"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5" />
+
+                <TextView
+                    android:text="Subject Placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subjectTxtFull"
+                    android:layout_weight="1"
+                    android:background = "@drawable/back" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="249dp"
+                android:layout_weight="0.83">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:text="Message Content Placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="434dp"
+                        android:id="@+id/contentTxtFull"
+                        android:background = "@drawable/back"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
